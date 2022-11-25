@@ -1,7 +1,21 @@
 import './style.css'
 import { merge } from './merge.js'
-import dataTwo from "/src/data2.json" assert {type: 'json'}
+import dataTwo from "./src/data2.json"
 // ...
+
+const main = (root) => {
+  const app = document.createElement("div")
+  app.id = "app"
+
+  const thead = generateTableHeader()
+  table.appendChild(thead)
+  app.appendChild(table)
+  root.appendChild(app)
+  generateTableBody()
+  addIfiniteLoadMoreListeners()
+  addFormListeners()
+}
+
 
 
 const getMergedData =  async () => {
@@ -41,7 +55,6 @@ const generateTableRow = (themePark) => {
   
   return tr;
 }
-
 
 const generateTableBody = () => {
   for(let i = tableStart; i < tableCount; i++) {
@@ -126,19 +139,6 @@ const addFormListeners = () => {
 }
 
 
-const main = (root) => {
-  const app = document.createElement("div")
-  app.id = "app"
 
-  const thead = generateTableHeader()
-  table.appendChild(thead)
-  app.appendChild(table)
-  root.appendChild(app)
-  generateTableBody()
-  addIfiniteLoadMoreListeners()
-  addFormListeners()
-
-
-}
 
 

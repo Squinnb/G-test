@@ -98,8 +98,11 @@ input {
   margin-left: .1rem;
   margin-right: .1rem;
   margin-bottom: .3rem;
-  height: 30px;
+  height: 32px;
   width: 135px;
+  padding: 2px;
+  border-radius: 9px;
+  background-color: #f3f3f3;
 }
 .shortenInput {
   width: 99px;
@@ -161,5 +164,10 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+
+  thead > tr > th {
+    background-color: #e6e4e4;
+    padding: .7rem
   }
 }
